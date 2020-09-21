@@ -18,14 +18,16 @@ set termguicolors
 set backspace=indent,eol,start
 set mouse=a
 set wrap!
-set list
+set nolist
 set nowrap
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*      
 set encoding=utf8
-set ff=unix
 set wildmode=longest,list
 set scrolloff=3
 let mapleader = "\<Space>"
+
+let g:python_host_prog='/usr/bin/python'
+let g:python3_host_prog='/usr/bin/python3'
 
 " Ale linting
 let g:ale_fixers = {
