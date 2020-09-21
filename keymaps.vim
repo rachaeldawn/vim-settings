@@ -56,9 +56,15 @@ nnoremap <Leader>gg :YcmCompleter GoTo<CR>
 nnoremap <Leader>qQ :qa!<CR>
 
 nnoremap <Leader>bd :bdelete<CR>
+nnoremap <Leader>wq :bdelete<CR>
 nnoremap <Leader>bn :enew<CR>
 nnoremap <Leader>bl :buffers<CR>:buffer<Space>
 
 nnoremap <Leader>` :tabe<CR>:te<CR>a
+
 nnoremap <Leader>pt :NERDTree<CR>
 nnoremap <Leader>pf :CtrlP<CR>
+
+
+" Note taking - add timestamp
+nnoremap <Leader>nn :put =strftime('%T')<CR>A<Space>-<Space>

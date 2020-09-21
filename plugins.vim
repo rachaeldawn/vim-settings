@@ -10,6 +10,7 @@ call vundle#begin("~/.config/nvim/bundle")
   Plugin 'preservim/nerdtree'
   Plugin 'tpope/vim-abolish'
   Plugin 'jiangmiao/auto-pairs'
+  Plugin 'xolox/vim-misc'
 
   " Themes
   Plugin 'dracula/vim'
@@ -24,6 +25,7 @@ call vundle#begin("~/.config/nvim/bundle")
   Plugin 'NLKNguyen/papercolor-theme'
   Plugin 'chriskempson/base16-vim'
   Plugin 'vim-scripts/reloaded.vim'
+  Plugin 'xolox/vim-colorscheme-switcher'
 
   " Pretty plugins
   Plugin 'yuttie/comfortable-motion.vim'
@@ -31,12 +33,16 @@ call vundle#begin("~/.config/nvim/bundle")
   " Typescript plugins
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'leafgarland/typescript-vim'
+  " DOM and Typescript highlight extras
+  Plugin 'HerringtonDarkholme/yats.vim'
 
   " Extra languages
   Plugin 'cakebaker/scss-syntax.vim'
   Plugin 'othree/yajs.vim'
   Plugin 'othree/es.next.syntax.vim'
   Plugin 'bfrg/vim-cpp-modern'
+  Plugin 'cespare/vim-toml'
+  Plugin 'stephpy/vim-yaml'
 
   Plugin 'wakatime/vim-wakatime'
   Plugin 'vhdirk/vim-cmake'

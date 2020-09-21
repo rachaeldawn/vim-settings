@@ -3,7 +3,6 @@ set encoding=utf-8
 set shortmess=I
 set colorcolumn=100
 set tabstop=2
-set hidden
 set expandtab
 set shiftwidth=2
 set smartindent
