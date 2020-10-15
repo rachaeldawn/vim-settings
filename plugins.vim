@@ -43,6 +43,8 @@ call vundle#begin("~/.config/nvim/bundle")
   Plugin 'bfrg/vim-cpp-modern'
   Plugin 'cespare/vim-toml'
   Plugin 'stephpy/vim-yaml'
+  Plugin 'fatih/vim-go'
+
 
   Plugin 'wakatime/vim-wakatime'
   Plugin 'vhdirk/vim-cmake'
