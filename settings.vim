@@ -1,7 +1,7 @@
 " Visuals
 set encoding=utf-8
 set shortmess=I
-set colorcolumn=100
+set colorcolumn=120
 set tabstop=2
 set expandtab
 set shiftwidth=2
@@ -31,16 +31,26 @@ let g:python3_host_prog='/usr/bin/python3'
 
 " Ale linting
 let g:ale_fixers = {
-\    'typescript': ['prettier', 'tslint'],
+\    'typescript': ['tslint'],
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
 \    'cs': ['OmniSharp']
 \}
+"
+"
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\  'typescript': {
+\      'extends': 'jsx',
+\  },
+\}
 
 " NERDTree
 let g:NERDTreeMouseMode=2
-let g:NERDTreeIgnore=[ '\~$', '__pycache__', 'CMakeFiles', 'CMakeCache', 'cmake_install.cmake', '\.a$', 'Makefile' ]
+let g:NERDTreeIgnore=[ '\~$', '__pycache__', 'CMakeFiles', 'CMakeCache', 'cmake_install.cmake', '\.a$', 'node_modules' ]
 let g:NERDTreeWinSize=40
 
 "YouCompleteMe

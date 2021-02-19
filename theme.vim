@@ -6,8 +6,6 @@ let theme = 'dark'
 " let theme = 'monokai'
 " let theme = 'flat'
 
-let use_256 = 0
-let disable_ycm = 0
 let light = 0
 
 " light theme
@@ -24,23 +22,22 @@ elseif theme == 'leet'
 elseif theme == 'flat'
   colorscheme one
 elseif theme == 'retro-term'
-  colorscheme base16-black-metal
-  let g:airline_theme='base16_eighties'
-  use_256 = 1
-  disable_ycm = 1
+  colorscheme PaperColor
 endif
 
-if use_256 == 1
-  set t_Co=256
-else
+if (has("termguicolors"))
+  set termguicolors
 endif
 
-if disable_ycm == 1
-  let g:ycm_enable_diagnostic_highlighting = 0
-  let g:ale_set_highlights = 0
-  let g:ycm_key_invoke_completion = @s
-endif
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 if light == 1
   set background=light
+endif
+
+" Enable true color 启用终端24位色
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
 endif

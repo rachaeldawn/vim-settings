@@ -26,13 +26,17 @@ call vundle#begin("~/.config/nvim/bundle")
   Plugin 'chriskempson/base16-vim'
   Plugin 'vim-scripts/reloaded.vim'
   Plugin 'xolox/vim-colorscheme-switcher'
+  Plugin 'jacoborus/tender.vim'
 
   " Pretty plugins
   Plugin 'yuttie/comfortable-motion.vim'
 
   " Typescript plugins
-  Plugin 'Valloric/YouCompleteMe'
+  " Plugin 'Valloric/YouCompleteMe'
+  Plugin 'neoclide/coc.nvim'
   Plugin 'leafgarland/typescript-vim'
+  Plugin 'peitalin/vim-jsx-typescript'
+
   " DOM and Typescript highlight extras
   Plugin 'HerringtonDarkholme/yats.vim'
 
@@ -44,7 +48,8 @@ call vundle#begin("~/.config/nvim/bundle")
   Plugin 'cespare/vim-toml'
   Plugin 'stephpy/vim-yaml'
   Plugin 'fatih/vim-go'
-
+  Plugin 'OmniSharp/omnisharp-vim'
+  Plugin 'rust-lang/rust.vim'
 
   Plugin 'wakatime/vim-wakatime'
   Plugin 'vhdirk/vim-cmake'

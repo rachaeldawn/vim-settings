@@ -2,11 +2,11 @@ nnoremap <F1> :NERDTree<CR>
 nnoremap <F2> :NERDTree %<CR>
 nnoremap <F3> :e %:p:h
 
-nnoremap <Leader>ef :YcmCompleter FixIt<CR>
+nnoremap <Leader>ef :CocFix<CR>
 nnoremap <Leader>lf :ALEFix<CR>
 
 nnoremap ; :buffers<CR>:b<Space>
-nnoremap <Ctrl-;> ;buffers<CR>;bd<Space>
+nnoremap <C-;> ;buffers<CR>;bd<Space>
 nnoremap <Leader>ea :YcmDiags<CR>
 nnoremap <Right> :cnext<CR>
 nnoremap <Left> :cprev<CR>
@@ -41,16 +41,12 @@ nnoremap <Leader>fas :wa<CR>
 " File Open
 nnoremap <Leader>fe :e 
 
-" Errors previous (vim)
-nnoremap <Leader>ep :cprev<CR>
-
-" documentation
-nnoremap <Leader>ed :YcmCompleter GetDoc<CR>
-
-nnoremap <Leader>er :YcmCompleter RefactorRename 
-
 " Token Go
-nnoremap <Leader>gg :YcmCompleter GoTo<CR>
+nmap <Leader>gg <Plug>(coc-definition)
+nmap <Leader>gy <Plug>(coc-type-definition)
+nmap <Leader>gi <Plug>(coc-implementation)
+nmap <Leader>gr <Plug>(coc-references)
+nmap <leader>er <Plug>(coc-rename)
 
 " Force Quit
 nnoremap <Leader>qQ :qa!<CR>
@@ -68,3 +64,25 @@ nnoremap <Leader>pf :CtrlP<CR>
 
 " Note taking - add timestamp
 nnoremap <Leader>nn :put =strftime('%T')<CR>A<Space>-<Space>
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
