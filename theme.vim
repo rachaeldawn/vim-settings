@@ -22,8 +22,23 @@ elseif theme == 'leet'
 elseif theme == 'flat'
   colorscheme one
 elseif theme == 'retro-term'
-  colorscheme PaperColor
+  " themes that work are:
+  " colorscheme PaperColor
+  " colorscheme murphy
+  colorscheme base16-solarflare
+  " colorscheme base16-seti
+  " colorscheme PaperColor
+  " colorscheme base16-harmonic-dark
+  let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
 endif
+
+function BrightHighlightOn()
+  hi CursorLine guibg=darkred
+endfunction
+
+function BrightHighlightOff()
+  hi CursorLine guibg=#191919
+endfunction
 
 if (has("termguicolors"))
   set termguicolors

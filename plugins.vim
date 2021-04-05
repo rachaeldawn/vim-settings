@@ -27,6 +27,7 @@ call vundle#begin("~/.config/nvim/bundle")
   Plugin 'vim-scripts/reloaded.vim'
   Plugin 'xolox/vim-colorscheme-switcher'
   Plugin 'jacoborus/tender.vim'
+  Plugin 'lucy/term.vim'
 
   " Pretty plugins
   Plugin 'yuttie/comfortable-motion.vim'

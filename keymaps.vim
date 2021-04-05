@@ -88,3 +88,8 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 map Q <Nop>
+
+
+" Theme Cycling
+map <C-PageUp> :NextColorScheme<CR>
+map <C-PageDown> :PrevColorScheme<CR>
