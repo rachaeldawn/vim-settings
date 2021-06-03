@@ -5,7 +5,6 @@ Abolish fucnton function
 Abolish fucntion function
 Abolish fuction function
 Abolish pubic public
-Abolish fuck BAD_JONNER_SWEARING
 Abolish prvate private
 Abolish privte private
 Abolish constnats constants

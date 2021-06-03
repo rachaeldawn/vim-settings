@@ -1,23 +1,24 @@
 syntax on
 
 " let theme = 'retro-term'
-let theme = 'dark'
-" let theme = 'light'
+" let theme = 'dark'
+let theme = 'light'
 " let theme = 'monokai'
 " let theme = 'flat'
+" let theme = 'green'
 
-let light = 0
+let light = 1
 
 " light theme
 if theme == 'light'
-  colorscheme base16-google-light
+  colors one
 elseif theme == 'monokai'
   colors base16-monokai
 elseif theme == 'dark'
 " dark theme
   colors dracula
-elseif theme == 'leet'
-  colorscheme base16-greenscreen
+elseif theme == 'green'
+  colorscheme greenvision
   let g:airline_theme='atomic'
 elseif theme == 'flat'
   colorscheme one
@@ -25,11 +26,14 @@ elseif theme == 'retro-term'
   " themes that work are:
   " colorscheme PaperColor
   " colorscheme murphy
-  colorscheme base16-solarflare
+  " colorscheme greenvision
   " colorscheme base16-seti
-  " colorscheme PaperColor
+  colorscheme PaperColor
   " colorscheme base16-harmonic-dark
+  " colors default
   let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
+  set noshowmatch
+  au BufEnter :NoMatchParent<CR>
 endif
 
 function BrightHighlightOn()

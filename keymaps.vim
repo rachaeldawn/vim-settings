@@ -57,8 +57,8 @@ nnoremap <Leader>bn :enew<CR>
 nnoremap <Leader>bl :buffers<CR>:buffer<Space>
 
 nnoremap <Leader>` :tabe<CR>:te<CR>a
+nnoremap <Leader><Leader> :
 
-nnoremap <Leader>pt :NERDTree<CR>
 nnoremap <Leader>pf :CtrlP<CR>
 
 
@@ -93,3 +93,13 @@ map Q <Nop>
 " Theme Cycling
 map <C-PageUp> :NextColorScheme<CR>
 map <C-PageDown> :PrevColorScheme<CR>
+
+" Align GitHub-flavored Markdown tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)

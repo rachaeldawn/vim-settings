@@ -51,6 +51,8 @@ call vundle#begin("~/.config/nvim/bundle")
   Plugin 'fatih/vim-go'
   Plugin 'OmniSharp/omnisharp-vim'
   Plugin 'rust-lang/rust.vim'
+  Plugin 'rescript-lang/vim-rescript'
+  Plugin 'junegunn/vim-easy-align'
 
   Plugin 'wakatime/vim-wakatime'
   Plugin 'vhdirk/vim-cmake'
