@@ -17,13 +17,14 @@ set clipboard=unnamedplus
 set termguicolors
 set backspace=indent,eol,start
 set mouse=a
-set wrap!
+set wrap
 set nolist
 set nowrap
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*      
 set encoding=utf8
 set wildmode=longest,list
 set scrolloff=3
+set linebreak
 let mapleader = "\<Space>"
 
 let g:python_host_prog='/usr/bin/python'

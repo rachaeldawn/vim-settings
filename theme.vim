@@ -1,13 +1,13 @@
 syntax on
 
 " let theme = 'retro-term'
-" let theme = 'dark'
-let theme = 'light'
+let theme = 'dark'
+" let theme = 'light'
 " let theme = 'monokai'
 " let theme = 'flat'
 " let theme = 'green'
 
-let light = 1
+let light = 0
 
 " light theme
 if theme == 'light'
@@ -52,6 +52,8 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 if light == 1
   set background=light
+else
+  set background=dark
 endif
 
 " Enable true color 启用终端24位色
