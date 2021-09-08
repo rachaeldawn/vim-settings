@@ -29,12 +29,13 @@ call vundle#begin("~/.config/nvim/bundle")
   Plugin 'jacoborus/tender.vim'
   Plugin 'lucy/term.vim'
   Plugin 'joshdick/onedark.vim'
+  Plugin 'noahfrederick/vim-hemisu'
+  Plugin 'sindresorhus/focus'
 
   " Pretty plugins
   Plugin 'yuttie/comfortable-motion.vim'
 
   " Typescript plugins
-  " Plugin 'Valloric/YouCompleteMe'
   Plugin 'neoclide/coc.nvim'
   Plugin 'leafgarland/typescript-vim'
   Plugin 'peitalin/vim-jsx-typescript'
