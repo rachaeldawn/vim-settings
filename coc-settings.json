@@ -10,14 +10,5 @@
     "!Select sequence",
     "!Split sequence",
     "!Sub"
-  ],
-  "languageserver": {
-    "rescript": {
-      "enable": true,
-      "module": "~/.config/nvim/bundle/vim-rescript/server/out/server.js",
-      "args": ["--node-ipc"],
-      "filetypes": ["rescript"],
-      "rootPatterns": ["bsconfig.json"]
-    }
-  }
+  ]
 }

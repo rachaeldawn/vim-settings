@@ -4,6 +4,7 @@ nnoremap <F3> :e %:p:h
 
 nnoremap <Leader>ef :CocFix<CR>
 nnoremap <Leader>lf :ALEFix<CR>
+nnoremap <Leader>of :!dolphin %:p:h & disown<CR>
 
 nnoremap ; :buffers<CR>:b<Space>
 nnoremap <C-;> ;buffers<CR>;bd<Space>
