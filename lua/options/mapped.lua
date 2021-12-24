@@ -6,8 +6,6 @@ function Mapped:new(key, value)
   obj = { key = key, value = value, _isMapped = true }
   obj = setmetatable(obj, self)
 
-  Mapped.__index = Mapped
-
   return obj
 end
 
@@ -26,8 +24,15 @@ function Mapped:setKey(key)
   return self
 end
 
+function Mapped:applyTo(settings)
+  k, v = self.key, self.value
+  settings[k] = v
+end
+
 function Mapped:__call() 
   return self.key, self.value
 end
+
+Mapped.__index = Mapped
 
 return Mapped

@@ -1,21 +1,35 @@
 local Mapped = require('options.mapped')
 
-local OptionSetter = {}
+local OptionSetter = { settings = nil }
 
-local OptionSetter = {}
+local messages = {
+  invalidNewTarget = "Requires use of vim.o, vim.bo, vim.wo, or vim.go"
+}
 
 function OptionSetter:new(settings) 
-  assert(self:validTarget(settings), "Requires use of vim.o, vim.bo, vim.wo, or vim.go")
+  assert(self:validTarget(settings), messages.invalidNewTarget)
 
-  OptionSetter.__index = self
-  OptionSetter.__call  = self.Run
-
-  return setmetatable({ settings = settings }, OptionSetter)
+  obj = { settings = settings }
+  setmetatable(obj, self)
+  self.__index = self
+  return obj
 end
 
 
 function OptionSetter:validTarget(settings) 
-  values = {vim.o, vim.bo, vim.wo, vim.go}
+  values = {
+    vim.o,
+    vim.bo,
+    vim.wo,
+    vim.go,
+    vim.g,
+    vim.b,
+    vim.w,
+    vim.t,
+    vim.v,
+    vim.env,
+    vim.opt,
+  }
 
   for k, v in pairs(values) do
     if settings == v then
@@ -24,32 +38,23 @@ function OptionSetter:validTarget(settings)
   end
 end
 
-function OptionSetter:Run(name, val) 
-  print("name, val", name, val)
+function OptionSetter:apply(name, val) 
   -- name is only ever an object if 
   if type(name) == type({}) then
     for k, v in pairs(name) do
-      self:Run(k, v)
+      self:apply(k, v)
     end
+
     return
   end
 
   if Mapped:isMapped(val) then
-    k, v = val()
-
-    fmt = "Mapped value detected: %s, %s"
-    print(fmt:format(k, v))
-
-    return self:Run(k, v)
+    return val:applyTo(self.settings)
   end
 
-  old = self.settings[name]
-
-  print("Setting " .. tostring(name) .. " to " .. tostring(val))
-  print("Old value: " .. tostring(old))
-
   self.settings[name] = val
-  print("New value: " .. tostring(self.settings[name]))
 end
+
+OptionSetter.__call = OptionSetter.apply
 
 return OptionSetter

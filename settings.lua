@@ -1,43 +1,14 @@
-options = require('options')
-Mapped = require('options.mapped')
+options      = require('options')
+OptionSetter = require('options.setter')
+Mapped       = require('options.mapped')
 
-yeet = Mapped:new("Yeet")
-print("Yeet setKey", yeet:setKey("ukey"))
-print("Yeet setValue", yeet:setValue("uwot"))
+print (OptionSetter.apply)
 
+-- wtf is this?
+vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-options:set{
-  -- Visuals
-  encoding    = "utf-8",
-  shortmess   = "Ic",
-  colorcolumn = "80,100,120,140,160",
-
-  tabstop     = 2,
-  shiftwidth  = 2,
-  scrolloff   = 6,
-  indentexpr  = "",
-  guioptions  = "a",
-  expandtab   = true,
-  smartindent = true,
-  number      = true,
-  showmatch   = true,
-  ignorecase  = true,
-  hlsearch    = false,
-  list        = false,
-  wrap        = false,
-  linebreak   = true,
-
-  guifont       = "Fira Code Medium 10",
-  clipboard     = "unnamedplus",
-  termguicolors = "",
-  backspace     = "indent,eol,start",
-  mouse         = "a",
-
-  wildmode    = "longest,list",
-  statusline  = vim.o["statusline"] .. "%F",
-  signcolumn  = "yes",
-  mapleader   = "<Space>",
-
+options.global{
+  mapleader = "<Space>",
   wildIgnores = Mapped:new("wildignores"):setValue{
     "*.pyc",
     "*.o",
@@ -50,20 +21,53 @@ options:set{
     "*.min.*",
   },
 
-  -- NERDTree
-  nerdTree = {
-    winSize   = Mapped:new("g:NERDTreeWinSize", 40),
-    mouseMode = Mapped:new("g:NERDTreeMouseMode", 2),
+  guioptions    = "a",
+}
 
-    ignore = Mapped:new("g:NERDTreeIgnore"):setValue{
-      '~$',
-      '__pycache__',
-      'CMakeFiles',
-      'CMakeCache',
-      'cmake_install.cmake',
-      '.a$',
-      'node_modules',
-    },
+options.vim{
+  -- Visuals
+  encoding      = "utf-8",
+  shortmess     = "Ic",
+  colorcolumn   = "80,100,120,140,160",
+
+  tabstop       = 2,
+  shiftwidth    = 2,
+  scrolloff     = 6,
+  indentexpr    = "",
+  expandtab     = true,
+  smartindent   = true,
+  number        = true,
+  showmatch     = true,
+  ignorecase    = true,
+  hlsearch      = false,
+  list          = false,
+  wrap          = false,
+  linebreak     = true,
+
+  guifont       = "Fira Code Medium 10",
+  clipboard     = "unnamedplus",
+  termguicolors = false,
+  backspace     = "indent,eol,start",
+  mouse         = "a",
+
+  wildmode      = "longest,list",
+  statusline    = vim.o["statusline"] .. "%F",
+  signcolumn    = "yes",
+}
+
+options.global{
+  -- NERDTree
+  nerdTreeWinSize   = Mapped:new("g:NERDTreeWinSize", 40),
+  nerdTreeMouseMode = Mapped:new("g:NERDTreeMouseMode", 2),
+
+  nerdTreeIgnore = Mapped:new("g:NERDTreeIgnore"):setValue{
+    '~$',
+    '__pycache__',
+    'CMakeFiles',
+    'CMakeCache',
+    'cmake_install.cmake',
+    '.a$',
+    'node_modules',
   },
 
   aleFixers = Mapped:new("g:ale_fixers"):setValue{

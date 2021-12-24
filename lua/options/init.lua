@@ -1,9 +1,15 @@
-local options = {}
 local OptionSetter = require('options.setter')
 
-options.set       = OptionSetter:new(vim.o)
-options.setGlobal = OptionSetter:new(vim.go)
-options.setWindow = OptionSetter:new(vim.wo)
-options.setBuffer = OptionSetter:new(vim.bo)
+return {
+  vim        = OptionSetter:new(vim.o),
+  vimBuffer  = OptionSetter:new(vim.bo),
+  vimWindoow = OptionSetter:new(vim.wo),
+  vimGlobal  = OptionSetter:new(vim.go),
+  global     = OptionSetter:new(vim.g),
+  buffer     = OptionSetter:new(vim.b),
+  window     = OptionSetter:new(vim.w),
+  tab        = OptionSetter:new(vim.t),
+  vars       = OptionSetter:new(vim.v),
+  env        = OptionSetter:new(vim.env),
+}
 
-return options
