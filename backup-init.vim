@@ -1,8 +1,6 @@
 set nocompatible
 filetype off
 
-set rtp+=$HOME/.config/nvim/bundle/Vundle.vim
-
 " Key Mappings
 if (!exists('g:vscode'))
   so $HOME/.config/nvim/plugins.vim
