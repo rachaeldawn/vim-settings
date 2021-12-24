@@ -1,2 +1,2 @@
 #! /bin/zsh
-nvim -u "$PWD/init.lua" --cmd "set rtp+=$PWD"
+nvim -u "$PWD/init.vim" --cmd "set rtp+=$PWD"

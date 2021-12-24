@@ -1,15 +1,11 @@
 options      = require('options')
-OptionSetter = require('options.setter')
-Mapped       = require('options.mapped')
-
-print (OptionSetter.apply)
 
 -- wtf is this?
 vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 options.global{
   mapleader = "<Space>",
-  wildIgnores = Mapped:new("wildignores"):setValue{
+  wildIgnores = options.newMapped("wildignores"):setValue{
     "*.pyc",
     "*.o",
     "*.obj",
@@ -57,10 +53,10 @@ options.vim{
 
 options.global{
   -- NERDTree
-  nerdTreeWinSize   = Mapped:new("g:NERDTreeWinSize", 40),
-  nerdTreeMouseMode = Mapped:new("g:NERDTreeMouseMode", 2),
+  nerdTreeWinSize   = options.newMapped("g:NERDTreeWinSize", 40),
+  nerdTreeMouseMode = options.newMapped("g:NERDTreeMouseMode", 2),
 
-  nerdTreeIgnore = Mapped:new("g:NERDTreeIgnore"):setValue{
+  nerdTreeIgnore = options.newMapped("g:NERDTreeIgnore"):setValue{
     '~$',
     '__pycache__',
     'CMakeFiles',
@@ -70,26 +66,26 @@ options.global{
     'node_modules',
   },
 
-  aleFixers = Mapped:new("g:ale_fixers"):setValue{
+  aleFixers = options.newMapped("g:ale_fixers"):setValue{
     typescript = {"tslint"},
     scss       = {"prettier"},
     html       = {"prettier"},
     vue        = {"eslint"},
   },
 
-  emmet = Mapped:new("g:user_emmet_settings"):setValue{
+  emmet = options.newMapped("g:user_emmet_settings"):setValue{
     javascript = { extends = 'jsx' },
     typescript = { extends = 'jsx' },
   },
 
   omnisharp = {
-    stdio   = Mapped:new("g:OmniSharp_server_stdio", 0),
-    useMono = Mapped:new("g:OmniSharp_server_use_mono", 1),
+    stdio   = options.newMapped("g:OmniSharp_server_stdio", 0),
+    useMono = options.newMapped("g:OmniSharp_server_use_mono", 1),
   },
 
   pySettings = {
-    hostProg  = Mapped:new("g:python_host_prog", '/usr/bin/python'),
-    host3Prog = Mapped:new("g:python3_host_prog", '/usr/bin/python3'),
+    hostProg  = options.newMapped("g:python_host_prog", '/usr/bin/python'),
+    host3Prog = options.newMapped("g:python3_host_prog", '/usr/bin/python3'),
   },
 }
 
