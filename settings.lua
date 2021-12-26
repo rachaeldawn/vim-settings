@@ -1,30 +1,24 @@
-options      = require('options')
+local themes = require 'themes'
+local options = require('options')
 
--- wtf is this?
-vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-options.global{
+options.vars {
   mapleader = "<Space>",
-  wildIgnores = options.newMapped("wildignores"):setValue{
-    "*.pyc",
-    "*.o",
-    "*.obj",
-    "*.svn",
-    "*.swp",
-    "*.class",
-    "*.hg",
-    "*.DS_Store",
-    "*.min.*",
-  },
-
-  guioptions    = "a",
 }
 
-options.vim{
+options.set {
+  omnifunc = 'v:lua.vim.lsp.omnifunc',
+}
+
+options.global {
+  wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
+}
+
+
+options.set {
   -- Visuals
   encoding      = "utf-8",
   shortmess     = "Ic",
-  colorcolumn   = "80,100,120,140,160",
+  colorcolumn   = "100,120,140,160",
 
   tabstop       = 2,
   shiftwidth    = 2,
@@ -42,7 +36,7 @@ options.vim{
 
   guifont       = "Fira Code Medium 10",
   clipboard     = "unnamedplus",
-  termguicolors = false,
+  termguicolors = true,
   backspace     = "indent,eol,start",
   mouse         = "a",
 
@@ -51,7 +45,7 @@ options.vim{
   signcolumn    = "yes",
 }
 
-options.global{
+options.custom.global {
   -- NERDTree
   nerdTreeWinSize   = options.newMapped("g:NERDTreeWinSize", 40),
   nerdTreeMouseMode = options.newMapped("g:NERDTreeMouseMode", 2),
@@ -89,6 +83,7 @@ options.global{
   },
 }
 
+themes.dark:apply()
 
 -- How tf do I set this?
 -- omnifunc=syntaxcomplete#Complete

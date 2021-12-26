@@ -29,6 +29,8 @@ function OptionSetter:validTarget(settings)
     vim.v,
     vim.env,
     vim.opt,
+    vim.opt_local,
+    vim.opt_global,
   }
 
   for k, v in pairs(values) do

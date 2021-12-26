@@ -3,20 +3,35 @@ local OptionSetter = require('options.setter')
 local Mapped = require('options.mapped')
 
 local options = {
-  vim         = OptionSetter:new(vim.o),
-  vimBuffer   = OptionSetter:new(vim.bo),
-  vimWindoow  = OptionSetter:new(vim.wo),
-  vimGlobal   = OptionSetter:new(vim.go),
-  global      = OptionSetter:new(vim.g),
-  buffer      = OptionSetter:new(vim.b),
-  window      = OptionSetter:new(vim.w),
-  tabbed      = OptionSetter:new(vim.t),
-  vars        = OptionSetter:new(vim.v),
-  environment = OptionSetter:new(vim.env),
+  -- set will allow you to replicate `set {something}`
+  set = OptionSetter:new(vim.o),
+  -- window will allow you to 
+  window = OptionSetter:new(vim.wo),
+  buffer = OptionSetter:new(vim.bo),
+  global = OptionSetter:new(vim.go),
+
+
+  -- Everything under custom returns nil if the key is invalid
+  custom = {
+    window = OptionSetter:new(vim.w),
+    buffer = OptionSetter:new(vim.b),
+    global = OptionSetter:new(vim.g),
+    tabbed = OptionSetter:new(vim.t),
+  },
+
+  vars   = OptionSetter:new(vim.v),
+
+  env = OptionSetter:new(vim.env)
 }
+
+function options:__call(k, v)
+  return options:set(k, v)
+end
 
 function options.newMapped(k, v)
   return Mapped:new(k, v)
 end
+
+setmetatable(options, options)
 
 return options

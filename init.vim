@@ -1,9 +1,9 @@
 set nocompatible
 filetype off
 
+so plugins.vim
+
 lua require 'settings'
 
 so keymaps.vim
-so plugins.vim
-so theme.vim
 so abbrev.vim
