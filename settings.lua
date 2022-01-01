@@ -1,4 +1,4 @@
-local themes = require 'themes'
+local themes = require('themes')
 local options = require('options')
 
 options.vars {
@@ -10,7 +10,7 @@ options.set {
 }
 
 options.global {
-  wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
+  wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,bundle/* ]],
 }
 
 
@@ -33,6 +33,9 @@ options.set {
   list          = false,
   wrap          = false,
   linebreak     = true,
+  autoindent    = true,
+  cindent       = false,
+  
 
   guifont       = "Fira Code Medium 10",
   clipboard     = "unnamedplus",
