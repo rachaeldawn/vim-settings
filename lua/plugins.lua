@@ -11,6 +11,7 @@ else
 end
 
 if vim.g.rdawn_wakatime then
+  print("Adding WakaTime")
   setup.utilities("wakatime")
 end
 
