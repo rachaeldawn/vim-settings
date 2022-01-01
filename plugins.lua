@@ -27,6 +27,7 @@ plug:add {
 -- Language Supports
 plug:add {
   'w0rp/ale',
+  'neovim/nvim-lspconfig',
   'vhdirk/vim-cmake',
   'cakebaker/scss-syntax.vim',
   'othree/yajs.vim',
@@ -39,6 +40,7 @@ plug:add {
   'leafgarland/typescript-vim',
   'peitalin/vim-jsx-typescript',
   'HerringtonDarkholme/yats.vim',
+  'nvim-lua/plenary.nvim',
 
   { 'rescript-lang/vim-rescript', { tag = 'v2.1.0' } },
   { 'fatih/vim-go', { ["do"] = ':GoUpdateBinaries' } },
@@ -61,6 +63,7 @@ plug:add {
   'wakatime/vim-wakatime',
   'tpope/vim-dispatch',
   'svermeulen/vimpeccable',
+  'rafcamlet/nvim-luapad',
   { 'sonph/onehalf', { rtp = 'vim/' } }
 }
 
