@@ -43,7 +43,6 @@ local languagePlugins = {
 }
 
 local utilities = {
-  "wakatime" = 'wakatime/vim-wakatime'
 }
 
 local defaultUtils = {
