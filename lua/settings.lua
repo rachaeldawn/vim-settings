@@ -1,4 +1,4 @@
-local themes = require 'themes'
+local themes = require('themes')
 local options = require('options')
 
 options.vars {

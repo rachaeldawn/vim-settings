@@ -60,7 +60,6 @@ plug:add {
   'tpope/vim-abolish',
   'jiangmiao/auto-pairs',
   'xolox/vim-misc',
-  'wakatime/vim-wakatime',
   'tpope/vim-dispatch',
   'svermeulen/vimpeccable',
   'rafcamlet/nvim-luapad',
