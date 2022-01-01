@@ -6,6 +6,10 @@ local messages = {
   invalidNewTarget = "Requires use of vim.o, vim.bo, vim.wo, or vim.go"
 }
 
+--[[
+-- OptionSetter:new
+-- @param settings The setting target you want to set values upon
+--]]
 function OptionSetter:new(settings) 
   assert(self:validTarget(settings), messages.invalidNewTarget)
 

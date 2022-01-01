@@ -84,4 +84,3 @@ vimp.inoremap({'expr'}, '<S-Tab>', function()
   end
 end)
 
-print('Is vimp nil?', vimp.nnoremap)
