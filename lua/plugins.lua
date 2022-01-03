@@ -1,6 +1,6 @@
 local plug = require('rdawn.plug')
 
-plug:start("~/.config/nvim/bundle")
+plug:start("~/.local/share/nvim/bundle")
 
 -- Themes
 plug:add {
@@ -41,6 +41,7 @@ plug:add {
   'peitalin/vim-jsx-typescript',
   'HerringtonDarkholme/yats.vim',
   'nvim-lua/plenary.nvim',
+  'nvim-treesitter/nvim-treesitter',
 
   { 'rescript-lang/vim-rescript', { tag = 'v2.1.0' } },
   { 'fatih/vim-go', { ["do"] = ':GoUpdateBinaries' } },

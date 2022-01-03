@@ -71,16 +71,18 @@ vimp.nnoremap("<Leader>nn", ":put =strftime('%T')<CR>A<Space>-<Space>")
 
 vimp.map("Q", "<Nop>")
 
-vimp.nnoremap("<F5>", function()
-  print("does this work?")
-  vim.cmd(": ")
-end)
-
 vimp.inoremap({'expr'}, '<S-Tab>', function()
   if vim.fn.pumvisible() then
     return [[<C-p>]]
-  else
-    return [[<C-h>]]
   end
+
+  return [[<C-h>]]
 end)
 
+vimp.inoremap({'expr'}, '<Tab>', function()
+  if vim.fn.pumvisible() then
+    return [[<C-n>]]
+  end
+
+  return [[<C-h>]]
+end)
