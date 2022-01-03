@@ -66,6 +66,14 @@ vimp.nnoremap("<Leader><Leader>", ":")
 vimp.nnoremap("<Leader>pf", ":CtrlP<CR>")
 
 
+vimp.nnoremap("<Leader>mm", ":marks<CR>")
+vimp.nnoremap("<Leader>md", ":<C-U>marks<CR>:delm<Space>")
+vimp.nnoremap("<Leader>mg", ":<C-U>marks<CR>:normal! `")
+
+vimp.nnoremap("<Leader>rr", ":!<Space>")
+vimp.nnoremap("<Leader>rh", ":%!<Space>")
+
+
 -- Note taking - add timestamp
 vimp.nnoremap("<Leader>nn", ":put =strftime('%T')<CR>A<Space>-<Space>")
 
