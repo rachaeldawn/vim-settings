@@ -1,4 +1,15 @@
 {
+   "java.jdt.ls.vmargs": "-javaagent:/Users/rachael/.local/bin/lombok.jar",
+   "java.referencesCodeLens.enabled": true,
+   "java.implementationsCodeLens.enabled": true,
+   "java.signatureHelp.enabled": true,
+   "java.import.maven.enabled": true,
+   "java.maxConcurrentBuilds": 4,
+   "java.completion.enabled": true,
+   "java.completion.guessMethodArguments": true,
+   "java.completion.maxResults": 20,
+   "java.maven.downloadSources": true,
+
   "yaml.customTags": [
     "!Equals sequence",
     "!FindInMap sequence",
