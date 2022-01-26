@@ -6,7 +6,7 @@ options.vars {
 }
 
 options.set {
-  omnifunc = 'v:lua.vim.lsp.omnifunc',
+  omnifunc = 'syntaxcomplete#Complete'
 }
 
 options.global {
@@ -85,5 +85,3 @@ options.custom.global {
 
 themes.dark:apply()
 
--- How tf do I set this?
--- omnifunc=syntaxcomplete#Complete
