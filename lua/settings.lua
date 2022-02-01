@@ -3,6 +3,8 @@ local options = require('options')
 
 options.vars {
   mapleader = "<Space>",
+  ["g:ctrlp_custom_ignore"] = 'node_modules|DS_Store|git',
+  ["g:ctrlp_user_command"] = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
 }
 
 options.set {
