@@ -3,10 +3,12 @@ local options = require('options')
 
 options.vars {
   mapleader = "<Space>",
+  ["g:ctrlp_custom_ignore"] = 'node_modules|DS_Store|git',
+  ["g:ctrlp_user_command"] = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
 }
 
 options.set {
-  omnifunc = 'v:lua.vim.lsp.omnifunc',
+  omnifunc = 'syntaxcomplete#Complete'
 }
 
 options.global {
@@ -85,5 +87,3 @@ options.custom.global {
 
 themes.dark:apply()
 
--- How tf do I set this?
--- omnifunc=syntaxcomplete#Complete
