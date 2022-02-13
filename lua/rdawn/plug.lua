@@ -4,7 +4,6 @@ local plug = {
 }
 
 local begin    = vim.fn['plug#begin']
-local loadPlug = vim.fn['plug#load']
 local basePlug = vim.fn['plug#']
 
 local function validItem(obj)
@@ -18,13 +17,13 @@ end
 
 function plug:add(obj)
   if obj == nil then
-    errMsg = "You have to actually pass an argument. Got %s for plug:add"
-    error(errMsg:format(type(add)))
+    local errMsg = "You have to actually pass an argument. Got %s for plug:add"
+    error(errMsg:format(type(obj)))
     return
   end
 
   if not validItem(obj) then
-    errMsg = "This only supports strings and tables, got %s"
+    local errMsg = "This only supports strings and tables, got %s"
     error(errMsg:format(type(obj)))
   end
 
@@ -35,7 +34,7 @@ function plug:add(obj)
 
   for k, value in pairs(obj) do
     if not validItem(value) then
-      errMsg = "Plugin at %d is not a string or object, actually %s" 
+      local errMsg = "Plugin at %d is not a string or object, actually %s"
       error(errMsg:format(k, type(value)))
     end
 
@@ -58,7 +57,7 @@ function plug:addPlugin(path, arg)
 
   if arg then
     basePlug(path, arg)
-  else 
+  else
     basePlug(path)
   end
 end

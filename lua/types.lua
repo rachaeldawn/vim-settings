@@ -21,20 +21,20 @@ local types = {
 }
 
 local function check(t, ...)
-  verifiers = arg
-  if not verifiers then 
+  local verifiers = arg
+  if not verifiers then
     verifiers = {}
   end
 
   for k, v in pairs(verifiers) do
     if type(v) ~= func then
-      msg = "Check function %s is not a function, actually %s"
+      local msg = "Check function %s is not a function, actually %s"
       error(msg:format(k, type(v)))
     end
   end
 
   return function(val)
-    matches = type(val) == t
+    local matches = type(val) == t
 
     if not matches or table.getn(arg) < 1 then
       return matches
@@ -52,8 +52,8 @@ end
 
 
 types.isArray = check(table, function (val)
-  for k in arg do
-    if type(v) ~= number then
+  for _ in arg do
+    if type(val) ~= number then
       return false
     end
   end
@@ -64,8 +64,8 @@ end)
 types.isTable = check(table)
 
 function types:register(name, t, fn)
-  nameFormat = "is%s%s"
-  key = nameFormat:format(name:sub(0, 1):upper(), name:sub(2))
+  local nameFormat = "is%s%s"
+  local key = nameFormat:format(name:sub(0, 1):upper(), name:sub(2))
 
   if types[key] then
     error("Key " .. key .. " already in use")

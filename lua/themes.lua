@@ -1,18 +1,18 @@
 local options = require('options')
 local Theme   = require('rdawn.theme')
 
-local exports = {}
+local module = {}
 
-exports.dark    = Theme:new("dracula")
-exports.monokai = Theme:new("base16-monokai")
-exports.green   = Theme:new("greenvision")
-exports.flat    = Theme:new("one")
-exports.green   = Theme:new("greenvision"):withAirline("atomic")
-exports.retro   = Theme:new("PaperColor")
+module.dark    = Theme:new("dracula")
+module.monokai = Theme:new("base16-monokai")
+module.green   = Theme:new("greenvision")
+module.flat    = Theme:new("one")
+module.green   = Theme:new("greenvision"):withAirline("atomic")
+module.retro   = Theme:new("PaperColor")
 
-function exports.retro:setup()
-  enter = 'BrightHighlightOn'
-  exit = 'BrightHighlightOff'
+function module.retro:setup()
+  local enter = 'BrightHighlightOn'
+  local exit = 'BrightHighlightOff'
 
   options.vim{showmatch = false}
   options.global{
@@ -46,4 +46,4 @@ vim.cmd [[
 ]]
 
 
-return exports
+return module
