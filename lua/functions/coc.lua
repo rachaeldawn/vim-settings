@@ -25,7 +25,7 @@ function ReinstallCocExtensions()
 end
 
 vim.cmd [[
-  command! CocReinstallExtensions lua YeetMageet()
+  command! CocReinstallExtensions lua ReinstallCocExtensions()
 ]]
 
 return rdawnCoc
