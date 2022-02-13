@@ -3,16 +3,16 @@ local options = require('options')
 
 options.vars {
   mapleader = "<Space>",
-  ["g:ctrlp_custom_ignore"] = 'node_modules|DS_Store|git',
-  ["g:ctrlp_user_command"] = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
 }
 
 options.set {
   omnifunc = 'syntaxcomplete#Complete'
 }
 
-options.global {
+options.globalVars {
   wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
+  ctrlp_custom_ignore = 'node_modules|DS_Store|git',
+  ctrlp_user_command = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
 }
 
 
@@ -47,7 +47,7 @@ options.set {
   signcolumn    = "yes",
 }
 
-options.custom.global {
+options.globalVars {
   -- NERDTree
   nerdTreeWinSize   = options.newMapped("g:NERDTreeWinSize", 40),
   nerdTreeMouseMode = options.newMapped("g:NERDTreeMouseMode", 2),

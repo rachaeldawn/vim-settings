@@ -15,12 +15,11 @@ local options = {
   custom = {
     window = OptionSetter:new(vim.w),
     buffer = OptionSetter:new(vim.b),
-    global = OptionSetter:new(vim.g),
     tabbed = OptionSetter:new(vim.t),
   },
 
   vars   = OptionSetter:new(vim.v),
-
+  globalVars = OptionSetter:new(vim.g),
   env = OptionSetter:new(vim.env)
 }
 
