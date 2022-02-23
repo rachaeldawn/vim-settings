@@ -12,6 +12,7 @@ local rdawnCoc = {
     "coc-css",
     "coc-angular",
     "coc-lua",
+    "coc-swagger",
   }
 }
 
@@ -26,6 +27,7 @@ end
 
 vim.cmd [[
   command! CocReinstallExtensions lua ReinstallCocExtensions()
+  command! -nargs=0 RenderSwagger :CocCommand swagger.render
 ]]
 
 return rdawnCoc

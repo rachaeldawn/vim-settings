@@ -13,6 +13,10 @@ options.globalVars {
   wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
   ctrlp_custom_ignore = 'node_modules|DS_Store|git',
   ctrlp_user_command = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
+  ctrlp_root_markers = {
+    "angular.json",
+    "package.json",
+  }
 }
 
 
