@@ -65,6 +65,7 @@ options.custom.global {
   aleFixers = options.newMapped("g:ale_fixers"):setValue{
     typescript = {"tslint"},
     scss       = {"prettier"},
+    css        = {"prettier"},
     html       = {"prettier"},
     vue        = {"eslint"},
   },
