@@ -2,8 +2,8 @@ local types = require "types"
 
 local Mapped = { }
 
-function Mapped:new(key, value) 
-  obj = { key = key, value = value, _isMapped = true }
+function Mapped:new(key, value)
+  local obj = { key = key, value = value, _isMapped = true }
   obj = setmetatable(obj, self)
 
   return obj
@@ -25,7 +25,7 @@ function Mapped:setKey(key)
 end
 
 function Mapped:applyTo(settings)
-  k, v = self.key, self.value
+  local k, v = self.key, self.value
   settings[k] = v
 end
 

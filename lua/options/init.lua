@@ -5,7 +5,7 @@ local Mapped = require('options.mapped')
 local options = {
   -- set will allow you to replicate `set {something}`
   set = OptionSetter:new(vim.o),
-  -- window will allow you to 
+  -- window will allow you to
   window = OptionSetter:new(vim.wo),
   buffer = OptionSetter:new(vim.bo),
   global = OptionSetter:new(vim.go),
@@ -15,12 +15,11 @@ local options = {
   custom = {
     window = OptionSetter:new(vim.w),
     buffer = OptionSetter:new(vim.b),
-    global = OptionSetter:new(vim.g),
     tabbed = OptionSetter:new(vim.t),
   },
 
   vars   = OptionSetter:new(vim.v),
-
+  globalVars = OptionSetter:new(vim.g),
   env = OptionSetter:new(vim.env)
 }
 

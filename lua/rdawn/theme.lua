@@ -3,9 +3,9 @@ local options = require('options')
 local Theme = { }
 
 function Theme:new(theme)
-  bg, airline = "dark", nil
+  local bg, airline = "dark", nil
 
-  obj = {
+  local obj = {
     theme      = theme,
     background = bg,
     airline    = airline,
@@ -22,7 +22,7 @@ function Theme:dark()
 end
 
 function Theme:light()
-  self.background = light
+  self.background = "light"
   return self
 end
 
@@ -36,12 +36,12 @@ function Theme:withSetup(fn)
   return self
 end
 
-function Theme:apply() 
+function Theme:apply()
   self.setup = self.setup or function() end
 
   self:setup()
 
-  colors = "colorscheme %s"
+  local colors = "colorscheme %s"
 
   vim.cmd(colors:format(self.theme))
 

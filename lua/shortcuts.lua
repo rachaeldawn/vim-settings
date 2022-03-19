@@ -63,7 +63,8 @@ vimp.nnoremap("<Leader>bl", ":buffers<CR>:buffer<Space>")
 vimp.nnoremap("<Leader>`", ":tabe<CR>:te<CR>a")
 vimp.nnoremap("<Leader><Leader>", ":")
 
-vimp.nnoremap("<Leader>pf", ":CtrlP<CR>")
+-- For command, check the global vars in settings.lua
+vimp.nnoremap("<Leader>pf", ":CtrlP .<CR>")
 
 
 vimp.nnoremap("<Leader>mm", ":marks<CR>")
@@ -114,4 +115,3 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 ]]
-
