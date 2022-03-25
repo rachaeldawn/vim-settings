@@ -6,21 +6,9 @@ options.vars {
 }
 
 options.set {
-  omnifunc = 'syntaxcomplete#Complete'
-}
+  omnifunc = 'syntaxcomplete#Complete',
+  confirm = true,
 
-options.globalVars {
-  wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
-  ctrlp_custom_ignore = 'node_modules|DS_Store|git',
-  ctrlp_user_command = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
-  ctrlp_root_markers = {
-    "angular.json",
-    "package.json",
-  }
-}
-
-
-options.set {
   -- Visuals
   encoding      = "utf-8",
   shortmess     = "Ic",
@@ -52,41 +40,41 @@ options.set {
 }
 
 options.globalVars {
-  -- NERDTree
-  nerdTreeWinSize   = options.newMapped("g:NERDTreeWinSize", 40),
-  nerdTreeMouseMode = options.newMapped("g:NERDTreeMouseMode", 2),
+  wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
+  ctrlp_custom_ignore = 'node_modules|DS_Store|.git',
+  ctrlp_user_command = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
+  ctrlp_root_markers = {
+    "angular.json",
+    "package.json",
+  },
 
-  nerdTreeIgnore = options.newMapped("g:NERDTreeIgnore"):setValue{
-    '~$',
+  -- NERDTree
+  NERDTreeWinSize   = 40,
+  NERDTreeMouseMode = 2,
+
+  NERDTreeIgnore = {
     '__pycache__',
     'CMakeFiles',
     'CMakeCache',
-    'cmake_install.cmake',
-    '.a$',
+    'cmake_install\\.cmake',
+    '\\.a$',
     'node_modules',
   },
 
-  aleFixers = options.newMapped("g:ale_fixers"):setValue{
+  ale_fixers = {
     typescript = {"tslint"},
     scss       = {"prettier"},
     html       = {"prettier"},
     vue        = {"eslint"},
   },
 
-  emmet = options.newMapped("g:user_emmet_settings"):setValue{
+  user_emmet_settings = {
     javascript = { extends = 'jsx' },
     typescript = { extends = 'jsx' },
   },
 
-  omnisharp = {
-    stdio   = options.newMapped("g:OmniSharp_server_stdio", 0),
-    useMono = options.newMapped("g:OmniSharp_server_use_mono", 1),
-  },
-
-  pySettings = {
-    hostProg  = options.newMapped("g:python_host_prog", '/usr/bin/python'),
-    host3Prog = options.newMapped("g:python3_host_prog", '/usr/bin/python3'),
-  },
+  python_host_prog  = '/usr/bin/python',
+  python3_host_prog = '/usr/bin/python3',
 }
 
 themes.dark:apply()

@@ -1,6 +1,6 @@
 local plug = {
   started = false,
-  done = false
+  done    = false,
 }
 
 local begin    = vim.fn['plug#begin']
@@ -10,7 +10,7 @@ local function validItem(obj)
   return type(obj) == type({}) or type(obj) == type("")
 end
 
-function plug:start(path) 
+function plug:start(path)
   begin(path)
   self.started = true
 end
