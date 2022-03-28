@@ -26,7 +26,7 @@ local messages = {
 -- OptionSetter:new
 -- @param settings The setting target you want to set values upon
 --]]
-function OptionSetter:new(settings) 
+function OptionSetter:new(settings)
   assert(self:validTarget(settings), messages.invalidNewTarget)
 
   local obj = { settings = settings }

@@ -7,4 +7,5 @@ if has('nvim')
   lua require 'settings'
   lua require 'shortcuts'
   lua require 'functions'
+  lua require 'boot'
 endif

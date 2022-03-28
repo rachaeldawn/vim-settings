@@ -6,21 +6,9 @@ options.vars {
 }
 
 options.set {
-  omnifunc = 'syntaxcomplete#Complete'
-}
+  omnifunc = 'syntaxcomplete#Complete',
+  confirm = true,
 
-options.globalVars {
-  wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
-  ctrlp_custom_ignore = 'node_modules|DS_Store|git',
-  ctrlp_user_command = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
-  ctrlp_root_markers = {
-    "angular.json",
-    "package.json",
-  }
-}
-
-
-options.set {
   -- Visuals
   encoding      = "utf-8",
   shortmess     = "Ic",
@@ -52,19 +40,27 @@ options.set {
 }
 
 options.globalVars {
+  wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
+  ctrlp_custom_ignore = 'node_modules|DS_Store|.git',
+  ctrlp_user_command = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
+  ctrlp_root_markers = {
+    "angular.json",
+    "package.json",
+  },
+
   -- NERDTree
-  NERDTreeWinSize = 40,
+  NERDTreeWinSize   = 40,
   NERDTreeMouseMode = 2,
 
   NERDTreeIgnore = {
-    -- '~$',
     '__pycache__',
     'CMakeFiles',
     'CMakeCache',
-    'cmake_install.cmake',
-    '.a$',
+    'cmake_install\\.cmake',
+    '\\.a$',
     'node_modules',
   },
+
   ale_fixers = {
     typescript = {"tslint"},
     scss       = {"prettier"},
@@ -77,11 +73,8 @@ options.globalVars {
     typescript = { extends = 'jsx' },
   },
 
-
-  pySettings = {
-    hostProg  = options.newMapped("python_host_prog", '/usr/bin/python'),
-    host3Prog = options.newMapped("python3_host_prog", '/usr/bin/python3'),
-  },
+  python_host_prog  = '/usr/bin/python',
+  python3_host_prog = '/usr/bin/python3',
 }
 
 themes.dark:apply()
