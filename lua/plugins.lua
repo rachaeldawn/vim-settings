@@ -64,6 +64,7 @@ plug:add {
   'tpope/vim-dispatch',
   'svermeulen/vimpeccable',
   'rafcamlet/nvim-luapad',
+  'wakatime/vim-wakatime',
   { 'sonph/onehalf', { rtp = 'vim/' } }
 }
 

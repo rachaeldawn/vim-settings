@@ -53,11 +53,11 @@ options.set {
 
 options.globalVars {
   -- NERDTree
-  nerdTreeWinSize   = options.newMapped("g:NERDTreeWinSize", 40),
-  nerdTreeMouseMode = options.newMapped("g:NERDTreeMouseMode", 2),
+  NERDTreeWinSize = 40,
+  NERDTreeMouseMode = 2,
 
-  nerdTreeIgnore = options.newMapped("g:NERDTreeIgnore"):setValue{
-    '~$',
+  NERDTreeIgnore = {
+    -- '~$',
     '__pycache__',
     'CMakeFiles',
     'CMakeCache',
@@ -65,27 +65,22 @@ options.globalVars {
     '.a$',
     'node_modules',
   },
-
-  aleFixers = options.newMapped("g:ale_fixers"):setValue{
+  ale_fixers = {
     typescript = {"tslint"},
     scss       = {"prettier"},
     html       = {"prettier"},
     vue        = {"eslint"},
   },
 
-  emmet = options.newMapped("g:user_emmet_settings"):setValue{
+  user_emmet_settings = {
     javascript = { extends = 'jsx' },
     typescript = { extends = 'jsx' },
   },
 
-  omnisharp = {
-    stdio   = options.newMapped("g:OmniSharp_server_stdio", 0),
-    useMono = options.newMapped("g:OmniSharp_server_use_mono", 1),
-  },
 
   pySettings = {
-    hostProg  = options.newMapped("g:python_host_prog", '/usr/bin/python'),
-    host3Prog = options.newMapped("g:python3_host_prog", '/usr/bin/python3'),
+    hostProg  = options.newMapped("python_host_prog", '/usr/bin/python'),
+    host3Prog = options.newMapped("python3_host_prog", '/usr/bin/python3'),
   },
 }
 
