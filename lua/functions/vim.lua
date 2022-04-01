@@ -3,5 +3,7 @@ function vim.cmdf (fmt, ...)
     return vim.cmd(fmt)
   end
 
-  return vim.cmd(string.format(fmt, ...))
+  local command = sprintf(fmt, ...)
+  printf("Command: %s", command)
+  return vim.cmd(command)
 end

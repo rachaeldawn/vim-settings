@@ -49,8 +49,10 @@ options.globalVars {
   },
 
   -- NERDTree
-  NERDTreeWinSize   = 40,
-  NERDTreeMouseMode = 2,
+  NERDTreeWinSize         = 40,
+  NERDTreeMouseMode       = 2,
+  NERDTreeShowHidden      = 1,
+  NERDTreeShowLineNumbers = 1,
 
   NERDTreeIgnore = {
     '__pycache__',
