@@ -51,7 +51,7 @@ options.globalVars {
   -- NERDTree
   NERDTreeWinSize         = 40,
   NERDTreeMouseMode       = 2,
-  NERDTreeShowHidden      = 1,
+  NERDTreeShowHidden      = 0,
   NERDTreeShowLineNumbers = 1,
 
   NERDTreeIgnore = {

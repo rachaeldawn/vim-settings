@@ -4,6 +4,5 @@ function vim.cmdf (fmt, ...)
   end
 
   local command = sprintf(fmt, ...)
-  printf("Command: %s", command)
   return vim.cmd(command)
 end
