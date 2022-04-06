@@ -41,6 +41,7 @@ plug:add {
   'peitalin/vim-jsx-typescript',
   'HerringtonDarkholme/yats.vim',
   'nvim-lua/plenary.nvim',
+  'folke/todo-comments.nvim',
   'nvim-treesitter/nvim-treesitter',
 
   { 'rescript-lang/vim-rescript', { tag = 'v2.1.0' } },

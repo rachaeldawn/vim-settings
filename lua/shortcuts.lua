@@ -17,6 +17,9 @@ vimp.nnoremap("<Left>", ":cprev<CR>")
 vimp.nnoremap("<Leader>k", ":call comfortable_motion#flick(-100)<CR>")
 vimp.nnoremap("<Leader>j", ":call comfortable_motion#flick(100)<CR>")
 
+vimp.nnoremap("<PageUp>", ":call comfortable_motion#flick(-100)<CR>")
+vimp.nnoremap("<PageDown>", ":call comfortable_motion#flick(100)<CR>")
+
 -- Tab close
 vimp.nnoremap("<Leader>td", ":tabc<CR>")
 
