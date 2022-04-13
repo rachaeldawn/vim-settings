@@ -1,11 +1,15 @@
 set nocompatible
+
 filetype off
 
+let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+
+if stridx(&rtp, s:path) < 1
+  let &rtp .= ',' . s:path
+endif
+
+exec 'so' s:path . '/vim/minimal.vim'
+
 if has('nvim')
-  so $HOME/.config/nvim/keymaps.vim
-  lua require 'plugins'
-  lua require 'settings'
-  lua require 'shortcuts'
-  lua require 'functions'
-  lua require 'boot'
+  lua require 'init'
 endif

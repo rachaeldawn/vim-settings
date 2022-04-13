@@ -42,6 +42,8 @@ options.set {
 
 options.globalVars {
   wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
+
+  -- CtrlP
   ctrlp_custom_ignore = 'node_modules|DS_Store|.git',
   ctrlp_user_command = { '.git', 'cd %s && git ls-files -co --exclude-standard' },
   ctrlp_root_markers = {
@@ -49,12 +51,28 @@ options.globalVars {
     "package.json",
   },
 
+  -- CoC (Command over Completion)
+  coc_global_extensions = {
+    "coc-html",
+    "coc-eslint",
+    "coc-emmet",
+    "coc-yaml",
+    "coc-tsserver",
+    "coc-tslint-plugin",
+    "coc-swagger",
+    "coc-json",
+    "coc-go",
+    "coc-css",
+    "coc-angular",
+    "coc-lua",
+    "coc-swagger",
+  },
+
   -- NERDTree
   NERDTreeWinSize         = 40,
   NERDTreeMouseMode       = 2,
   NERDTreeShowHidden      = 0,
   NERDTreeShowLineNumbers = 1,
-
   NERDTreeIgnore = {
     '__pycache__',
     'CMakeFiles',
@@ -64,6 +82,7 @@ options.globalVars {
     'node_modules',
   },
 
+  -- ALE
   ale_fixers = {
     typescript = {"tslint"},
     scss       = {"prettier"},
@@ -71,6 +90,7 @@ options.globalVars {
     vue        = {"eslint"},
   },
 
+  -- Emmet
   user_emmet_settings = {
     javascript = { extends = 'jsx' },
     typescript = { extends = 'jsx' },

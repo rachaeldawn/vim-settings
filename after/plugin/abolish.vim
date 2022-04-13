@@ -1,3 +1,7 @@
+if !exists(":Abolish") 
+  finish
+endif
+
 Abolish teh the
 Abolish {prior,activ}ites {priorit, activit}ies
 Abolish functoin function

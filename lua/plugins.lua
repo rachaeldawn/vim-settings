@@ -66,6 +66,8 @@ plug:add {
   'svermeulen/vimpeccable',
   'rafcamlet/nvim-luapad',
   'wakatime/vim-wakatime',
+  'preservim/nerdcommenter',
+  'junegunn/goyo.vim',
   { 'sonph/onehalf', { rtp = 'vim/' } }
 }
 

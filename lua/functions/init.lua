@@ -1,3 +1,3 @@
+require 'functions.vim'
 require 'functions.globals'
 require 'functions.coc'
-require 'functions.vim'
