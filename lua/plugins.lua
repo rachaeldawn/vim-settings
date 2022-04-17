@@ -42,6 +42,8 @@ plug:add {
   'HerringtonDarkholme/yats.vim',
   'nvim-lua/plenary.nvim',
   'folke/todo-comments.nvim',
+  'folke/trouble.nvim',
+  'nvim-telescope/telescope.nvim',
   'nvim-treesitter/nvim-treesitter',
 
   { 'rescript-lang/vim-rescript', { tag = 'v2.1.0' } },

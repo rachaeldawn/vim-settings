@@ -30,11 +30,12 @@ nnoremap <Leader>wl <C-W>l
 nnoremap <Leader>wh <C-W>h
 nnoremap <Leader>wj <C-W>j
 nnoremap <Leader>wk <C-W>k
+
 nnoremap <Leader>w/ :vsp<CR>
 nnoremap <Leader>w- :sp<CR>
 
-"" New Tab
-nnoremap <Leader>tn :tabe <CR>
+nnoremap <Leader>we/ :vsp<BAR>ene
+nnoremap <Leader>we- :sp<BAR>ene
 
 "" New File
 nnoremap <Leader>nf :new <CR>
@@ -46,28 +47,34 @@ nnoremap <Leader>fas :wa<CR>
 "" File Open
 nnoremap <Leader>fe :e 
 
-
 "" Force Quit
-nnoremap <Leader>qQ :qa!<CR>
+nnoremap QQ :qa<CR>
 
-nnoremap <Leader>bd :bdelete<CR>
+"" --- Delete things
+nnoremap <Leader>db :bdelete<CR>
+nnoremap <Leader>dm :<C-U>marks<CR>:delm<Space>
+
+"" --- Create things
+nnoremap <Leader>nb :enew<CR>
+" create new tab
+nnoremap <Leader>nt :tabe <CR>
+
 nnoremap <Leader>wq :bdelete<CR>
-nnoremap <Leader>bn :enew<CR>
 nnoremap <Leader>bl :buffers<CR>:buffer<Space>
 
-nnoremap <Leader>` :tabe<CR>:te<CR>a
+nnoremap <Leader>` :ene<BAR>:te<CR>a
 nnoremap <Leader><Leader> :
 
 "" For command, check the global vars in settings.lua
 nnoremap <Leader>pf :CtrlP .<CR>
 
-
 nnoremap <Leader>mm :marks<CR>
-nnoremap <Leader>md :<C-U>marks<CR>:delm<Space>
-nnoremap <Leader>mg :<C-U>marks<CR>:normal! `
+nnoremap <Leader>gm :<C-U>marks<CR>:normal! `
+nnoremap <Leader>; :<C-U>marks<CR>:normal! `
 
 nnoremap <Leader>rr :!<Space>
-nnoremap <Leader>rh :%!<Space>
+nnoremap <Leader>rh :!<Space>
+nnoremap <Leader>br :%!<Space>
 
 
 "" Note taking - add timestamp

@@ -6,3 +6,10 @@ endfunction
 
 " Minimal shortcuts
 call s:sourceFile('shortcuts.vim')
+
+au FocusGained,BufEnter * :silent! checktime
+
+set viminfo='1000,f1
+
+" Autosave when focus lost
+" au FocusLost,WinLeave * :silent! w
