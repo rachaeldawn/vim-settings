@@ -1,3 +1,14 @@
+if !exists(':CocDiagnostics')
+  finish
+endif
+
+"" Token Go
+nmap <Leader>gg <Plug>(coc-definition)
+nmap <Leader>gy <Plug>(coc-type-definition)
+nmap <Leader>gi <Plug>(coc-implementation)
+nmap <Leader>gr <Plug>(coc-references)
+nmap <Leader>er <Plug>(coc-rename)
+
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -11,11 +22,7 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+                            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"

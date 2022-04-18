@@ -1,9 +1,15 @@
 set nocompatible
+
 filetype off
 
-so $HOME/.config/nvim/keymaps.vim
+let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
-lua require 'plugins'
-lua require 'settings'
-lua require 'shortcuts'
-lua require 'functions'
+if stridx(&rtp, s:path) < 1
+  let &rtp .= ',' . s:path
+endif
+
+exec 'so' s:path . '/vim/minimal.vim'
+
+if has('nvim')
+  lua require 'init'
+endif

@@ -9,17 +9,17 @@ function Mapped:new(key, value)
   return obj
 end
 
-function Mapped:isMapped(arg) 
+function Mapped:isMapped(arg)
   return type(arg) == types.table and arg._isMapped
 end
 
 
-function Mapped:setValue(val) 
+function Mapped:setValue(val)
   self.value = val
   return self
 end
 
-function Mapped:setKey(key) 
+function Mapped:setKey(key)
   self.key = key
   return self
 end
