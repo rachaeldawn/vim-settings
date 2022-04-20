@@ -4,6 +4,9 @@ nnoremap <F1> :NERDTree<CR>
 nnoremap <F2> :NERDTree %<CR>
 nnoremap <F3> :e %:p:h
 
+nnoremap <Leader>pt :NERDTree<CR>
+nnoremap <Leader>ph :NERDTree %<CR>
+
 nnoremap <Leader>ef :CocFix<CR>
 nnoremap <Leader>lf :ALEFix<CR>
 nnoremap <Leader>of :!dolphin %:p:h & disown<CR>

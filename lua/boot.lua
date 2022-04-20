@@ -6,6 +6,10 @@ local vimFolder = vim.fn.globpath(basePath, "*")
 local vimFile = sprintf("%s/init.vim", basePath)
 local luaDir  = sprintf("%s/lua", basePath)
 
+if vim.fn.isdirectory(basePath) then
+  addRuntime(basePath)
+end
+
 if vimFolder:match("lua") and vim.fn.isdirectory(luaDir) then
   addRuntime(basePath)
 end

@@ -87,6 +87,7 @@ options.globalVars {
   ale_fixers = {
     typescript = {"tslint"},
     scss       = {"prettier"},
+    css        = {"prettier"},
     html       = {"prettier"},
     vue        = {"eslint"},
   },
