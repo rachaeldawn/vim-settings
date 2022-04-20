@@ -52,11 +52,14 @@ nnoremap QQ :qa<CR>
 
 "" --- Delete things
 nnoremap <Leader>db :bdelete<CR>
+nnoremap <Leader>bd :bdelete<CR>
 nnoremap <Leader>dm :<C-U>marks<CR>:delm<Space>
+nnoremap <Leader>md :<C-U>marks<CR>:delm<Space>
 
 "" --- Create things
 nnoremap <Leader>nb :enew<CR>
 " create new tab
+nnoremap <Leader>tn :tabe <CR>
 nnoremap <Leader>nt :tabe <CR>
 
 nnoremap <Leader>wq :bdelete<CR>
@@ -85,6 +88,4 @@ map Q <Nop>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<C-h>"
-
-
 
