@@ -73,7 +73,7 @@ options.globalVars {
   NERDTreeMouseMode       = 2,
   NERDTreeShowHidden      = 0,
   NERDTreeShowLineNumbers = 1,
-  NERDTreeShowBookmarks   = 1,
+  NERDTreeShowBookmarks   = 0,
   NERDTreeIgnore = {
     '__pycache__',
     'CMakeFiles',

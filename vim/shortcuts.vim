@@ -82,6 +82,7 @@ nnoremap <Leader>rr :!<Space>
 nnoremap <Leader>rh :!<Space>
 nnoremap <Leader>br :%!<Space>
 
+nnoremap <Leader>/ :noh<CR>
 
 "" Note taking - add timestamp
 nnoremap <Leader>nn :put =strftime('%T')<CR>A<Space>-<Space>
@@ -92,3 +93,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<C-h>"
 
+nnoremap <Up> :resize +5<CR>
+nnoremap <Down> :resize -5<CR>
+nnoremap <Left> :vertical resize -5<CR>
+nnoremap <Right> :vertical resize +5<CR>
