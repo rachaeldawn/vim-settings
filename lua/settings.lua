@@ -25,9 +25,10 @@ options.set {
   showmatch     = true,
   ignorecase    = true,
   hlsearch      = false,
-  list          = false,
+  list          = true,
   wrap          = false,
   linebreak     = true,
+  listchars     = 'tab:>-,trail:·,space:·',
 
   guifont       = "Fira Code Medium 10",
   clipboard     = "unnamedplus",
