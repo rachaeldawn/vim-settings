@@ -37,8 +37,8 @@ nnoremap <Leader>wk <C-W>k
 nnoremap <Leader>w/ :vsp<CR>
 nnoremap <Leader>w- :sp<CR>
 
-nnoremap <Leader>we/ :vsp<BAR>ene
-nnoremap <Leader>we- :sp<BAR>ene
+nnoremap <Leader>we/ :vsp<BAR>ene<CR>
+nnoremap <Leader>we- :sp<BAR>ene<CR>
 
 "" New File
 nnoremap <Leader>nf :new <CR>
