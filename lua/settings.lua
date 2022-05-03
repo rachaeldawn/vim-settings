@@ -69,11 +69,11 @@ options.globalVars {
   },
 
   -- NERDTree
-  NERDTreeWinSize         = 40,
+  NERDTreeWinSize         = 60,
   NERDTreeMouseMode       = 2,
   NERDTreeShowHidden      = 0,
   NERDTreeShowLineNumbers = 1,
-  NERDTreeShowBookmarks   = 0,
+  NERDTreeShowBookmarks   = 1,
   NERDTreeIgnore = {
     '__pycache__',
     'CMakeFiles',
