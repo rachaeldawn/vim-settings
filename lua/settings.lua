@@ -1,6 +1,22 @@
-local themes = require('themes')
+local themes  = require('themes')
 local options = require('options')
-local todo = require('todo-comments')
+local todo    = require('todo-comments')
+
+local columns = vim.go.columns;
+
+local nerdTreeWidth;
+
+if columns > 180 then
+  nerdTreeWidth = 60;
+elseif columns > 170 then
+  nerdTreeWidth = 55;
+elseif columns > 160 then
+  nerdTreeWidth = 50;
+elseif columns > 150 then
+  nerdTreeWidth = 45;
+else
+  nerdTreeWidth = 40;
+end
 
 options.vars {
   mapleader = "<Space>",
@@ -70,7 +86,7 @@ options.globalVars {
   },
 
   -- NERDTree
-  NERDTreeWinSize         = 60,
+  NERDTreeWinSize         = nerdTreeWidth,
   NERDTreeMouseMode       = 2,
   NERDTreeShowHidden      = 0,
   NERDTreeShowLineNumbers = 1,
