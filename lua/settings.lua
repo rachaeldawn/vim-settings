@@ -6,11 +6,7 @@ local columns = vim.go.columns;
 
 local nerdTreeWidth;
 
-if columns > 180 then
-  nerdTreeWidth = 60;
-elseif columns > 170 then
-  nerdTreeWidth = 55;
-elseif columns > 160 then
+if columns > 160 then
   nerdTreeWidth = 50;
 elseif columns > 150 then
   nerdTreeWidth = 45;
@@ -102,7 +98,9 @@ options.globalVars {
 
   -- ALE
   ale_fixers = {
-    typescript = {"tslint"},
+    typescript = {"eslint"},
+    javascript = {"eslint"},
+    json       = {"prettier"},
     scss       = {"prettier"},
     css        = {"prettier"},
     html       = {"prettier"},
