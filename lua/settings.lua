@@ -19,8 +19,8 @@ options.vars {
 }
 
 options.set {
-  omnifunc = 'syntaxcomplete#Complete',
-  confirm = true,
+  omnifunc      = 'syntaxcomplete#Complete',
+  confirm       = true,
 
   -- Visuals
   encoding      = "utf-8",

@@ -50,11 +50,6 @@ plug:add {
   { 'fatih/vim-go', { ["do"] = ':GoUpdateBinaries' } },
   { 'neoclide/coc.nvim', { branch = 'release' } },
   { 'cespare/vim-toml', { branch = 'main' } },
-
-  -- PHP Trash
-  'tpope/vim-projectionist',
-  'noahfrederick/vim-composer',
-  'noahfrederick/vim-laravel',
 }
 
 -- Utilities

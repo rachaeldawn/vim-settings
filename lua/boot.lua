@@ -17,17 +17,3 @@ end
 if vimFolder:match('init.vim') then
   vim.cmdf("source %s", vimFile)
 end
-
--- printf("vimFolder %s", vimFolder)
-
--- if #vimInit < 1 and #luaFolder < 1 then
-  -- return
--- end
-
--- if #luaFolder > 0 then
-  -- addRuntime(basePath)
--- end
-
--- vim.cmd[[set rtp]]
-
--- vim.cmdf("source %s/%s", basePath, "init.vim")
