@@ -7,7 +7,6 @@ nnoremap <F3> :e %:p:h
 nnoremap <Leader>pt :NERDTree<CR>
 nnoremap <Leader>ph :NERDTree %<CR>
 
-nnoremap <Leader>ef :CocFix<CR>
 nnoremap <Leader>lf :ALEFix<CR>
 nnoremap <Leader>of :!dolphin %:p:h & disown<CR>
 
@@ -90,10 +89,6 @@ nnoremap <Leader>/ :noh<CR>
 nnoremap <Leader>nn :put =strftime('%T')<CR>A<Space>-<Space>
 
 map Q <Nop>
-
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<C-h>"
 
 nnoremap <Up> :resize +5<CR>
 nnoremap <Down> :resize -5<CR>

@@ -24,6 +24,7 @@ plug:add {
   { 'sindresorhus/focus', { rtp = 'vim' } }
 }
 
+
 -- Language Supports
 plug:add {
   'w0rp/ale',
@@ -60,6 +61,7 @@ plug:add {
   'junegunn/vim-easy-align',
   'ctrlpvim/ctrlp.vim',
   'vim-airline/vim-airline',
+  'vim-airline/vim-airline-themes',
   'preservim/nerdtree',
   'tpope/vim-abolish',
   'jiangmiao/auto-pairs',
