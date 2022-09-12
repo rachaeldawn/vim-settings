@@ -1,4 +1,5 @@
-set tabstop=2
-set sts=2
-set sw=2
-set expandtab
+setlocal tabstop=2
+setlocal sts=2
+setlocal sw=2
+setlocal expandtab
+setlocal listchars="tab:>-,trail:·,lead:·,multispace:·"

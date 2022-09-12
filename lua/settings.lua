@@ -44,7 +44,7 @@ options.set {
   list          = true,
   wrap          = false,
   linebreak     = true,
-  listchars     = "tab:>-,trail:·,lead:·,multispace:·",
+  -- listchars     = "tab:>-,trail:·,lead:·,multispace:·",
 
   guifont       = "Fira Code Medium 10",
   clipboard     = "unnamedplus",

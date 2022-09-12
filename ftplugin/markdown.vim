@@ -1,2 +1,2 @@
-set colorcolumn=
-set wrap
+setlocal colorcolumn=
+setlocal wrap
