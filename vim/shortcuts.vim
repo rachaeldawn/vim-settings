@@ -55,7 +55,9 @@ nnoremap QQ :qa<CR>
 
 "" --- Delete things
 nnoremap <Leader>db :bdelete<CR>
+nnoremap <Leader>dab :%bdelete<CR>
 nnoremap <Leader>bd :bdelete<CR>
+nnoremap <Leader>bad :%bdelete<CR>
 nnoremap <Leader>dm :<C-U>marks<CR>:delm<Space>
 nnoremap <Leader>md :<C-U>marks<CR>:delm<Space>
 
