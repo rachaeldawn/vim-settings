@@ -3,4 +3,4 @@ setlocal shiftwidth=2
 setlocal noexpandtab
 setlocal smartindent
 setlocal autoindent
-setlocal listchars="trail:·,lead:·"
+setlocal listchars="tab:\ \ ,trail:·,lead:·"
