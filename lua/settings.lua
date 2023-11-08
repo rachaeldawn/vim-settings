@@ -100,11 +100,11 @@ options.globalVars {
   ale_fixers = {
     typescript = { "eslint" },
     javascript = { "eslint" },
-    go         = { "gopls" },
   },
 
   ale_linters_ignore = {
     json = { "eslint" },
+    go   = { "gopls" },
   },
 
   -- Emmet

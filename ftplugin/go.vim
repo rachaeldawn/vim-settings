@@ -4,3 +4,4 @@ setlocal noexpandtab
 setlocal smartindent
 setlocal autoindent
 setlocal listchars="tab:\ \ ,trail:·,lead:·"
+let g:ale_enabled=0
