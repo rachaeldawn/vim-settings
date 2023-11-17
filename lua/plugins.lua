@@ -61,6 +61,7 @@ plug:add {
 
 -- Utilities
 plug:add {
+  'jbyuki/instant.nvim',
   'airblade/vim-gitgutter',
   'mkitt/tabline.vim',
   'mattn/emmet-vim',
