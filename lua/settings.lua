@@ -81,6 +81,11 @@ options.globalVars {
     "coc-swagger",
   },
 
+  coc_filetype_map = {
+    [".vue"] = "vue",
+    [".ts"] = 'typescript',
+  },
+
   -- NERDTree
   NERDTreeWinSize         = nerdTreeWidth,
   NERDTreeMouseMode       = 2,
