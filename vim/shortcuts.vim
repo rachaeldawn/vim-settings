@@ -45,6 +45,7 @@ nnoremap <Leader>nf :new <CR>
 "" File Save
 nnoremap <Leader>fs :w<CR>
 nnoremap <Leader>fas :wa<CR>
+nnoremap <Leader>fh ggVG
 
 "" File Open
 nnoremap <Leader>fe :e 

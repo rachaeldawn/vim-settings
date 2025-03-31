@@ -46,6 +46,9 @@ plug:add {
   'folke/trouble.nvim',
   'nvim-telescope/telescope.nvim',
   'nvim-treesitter/nvim-treesitter',
+  -- zig language support
+  'ziglang/zig.vim',
+  'neoclide/jsonc.vim',
 
   { 'rescript-lang/vim-rescript', { tag = 'v2.1.0' } },
   { 'fatih/vim-go', { ["do"] = ':GoUpdateBinaries' } },
