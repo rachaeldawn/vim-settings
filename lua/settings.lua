@@ -14,10 +14,6 @@ else
   nerdTreeWidth = 40;
 end
 
-options.vars {
-  mapleader = "<Space>",
-}
-
 options.set {
   omnifunc      = 'syntaxcomplete#Complete',
   confirm       = true,
@@ -54,6 +50,8 @@ options.set {
 }
 
 options.globalVars {
+
+  mapleader = "<Space>",
   wildignore = [[ *.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.* ]],
 
   -- CtrlP
