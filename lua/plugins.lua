@@ -9,7 +9,6 @@ plug:add {
   'rakr/vim-two-firewatch',
   'reedes/vim-colors-pencil',
   'rakr/vim-one',
-  'rakr/vim-colors-rakr',
   'vim-scripts/greenvision',
   'vim-scripts/summerfruit256.vim',
   'NLKNguyen/papercolor-theme',
@@ -17,7 +16,6 @@ plug:add {
   'vim-scripts/reloaded.vim',
   'xolox/vim-colorscheme-switcher',
   'jacoborus/tender.vim',
-  'lucy/term.vim',
   'joshdick/onedark.vim',
   'noahfrederick/vim-hemisu',
   'yuttie/comfortable-motion.vim',
@@ -42,13 +40,20 @@ plug:add {
   'peitalin/vim-jsx-typescript',
   'HerringtonDarkholme/yats.vim',
   'nvim-lua/plenary.nvim',
-  'folke/todo-comments.nvim',
   'folke/trouble.nvim',
   'nvim-telescope/telescope.nvim',
   'nvim-treesitter/nvim-treesitter',
   -- zig language support
   'ziglang/zig.vim',
   'neoclide/jsonc.vim',
+  { 'nvim-treesitter/nvim-treesitter', { ["do"] = ':TSUpdate'} },
+  -- 'tree-sitter/tree-sitter-css',
+  -- 'serenadeai/tree-sitter-scss',
+  -- 'tree-sitter/tree-sitter-go',
+  -- 'tree-sitter/tree-sitter-typescript',
+  -- 'tree-sitter/tree-sitter-javascript',
+  -- 'ikatyang/tree-sitter-yaml',
+  -- 'MunifTanjim/tree-sitter-lua',
 
   { 'rescript-lang/vim-rescript', { tag = 'v2.1.0' } },
   { 'fatih/vim-go', { ["do"] = ':GoUpdateBinaries' } },
@@ -58,6 +63,7 @@ plug:add {
 
 -- Utilities
 plug:add {
+  'jbyuki/instant.nvim',
   'airblade/vim-gitgutter',
   'mkitt/tabline.vim',
   'mattn/emmet-vim',

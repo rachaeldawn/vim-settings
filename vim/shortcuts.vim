@@ -47,6 +47,9 @@ nnoremap <Leader>fs :w<CR>
 nnoremap <Leader>fas :wa<CR>
 nnoremap <Leader>fh ggVG
 
+"" File Find
+nnoremap <Leader>ff /
+
 "" File Open
 nnoremap <Leader>fe :e 
 
